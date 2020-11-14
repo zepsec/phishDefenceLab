@@ -13,17 +13,17 @@ There are two ways to setup the lab.
 1. Powershell script:
 To do this, you need to enable execution of scripts, which is by default disabled in windows. For this, go to powershell and type
 ```sh
-PS C:\Users\user> Set-ExecutionPolicy Unrestricted
+PS C:\Users\user\pdclab> Set-ExecutionPolicy Unrestricted
 ```
 After changing the Execution Policy, just execute the script
 ```sh
-PS C:\Users\user> .\setup.ps1
+PS C:\Users\user\pdclab> .\setup.ps1
 ```
 
 2. Using vagrant
 Download the Vagrantfile from the repo and store it in a seperate folder. With this you can directly setup the box with one command
 ```sh
-PS C:\Users\user> vagrant up
+PS C:\Users\user\pdclab> vagrant up
 ```
 
 Advantage of powershell script over directly using vagrant, is that script will automatically check for the presence of VirtualBox, Vagrant and the lab in your system.

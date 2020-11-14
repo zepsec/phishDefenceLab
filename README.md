@@ -48,6 +48,7 @@ Password: resu
 - [PDFStreamDumper](https://github.com/dzzie/pdfstreamdumper)
 
 ### Other Softwares:
+- [Python 3.8.6](https://www.python.org/downloads/release/python-386/)
 - [Notepad++](https://notepad-plus-plus.org/downloads/) Portable
 - [Adobe Acrobat Reader](get.adobe.com/reader/)
 - [Bulk Crap Uninstaller](https://www.bcuninstaller.com/) Portable

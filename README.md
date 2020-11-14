@@ -1,7 +1,7 @@
 # phishDefenceLab
 Testing laboratory for Phish Defense | Digital Forensics &amp; Incident Response
 
-Phish Defence Lab is a pre-configured virtual machine, consisting of various tools and settings needed for a Phishing Defence Threat Response.
+Phish Defence Lab is a pre-configured virtual machine, consisting of various tools and settings needed for a Phishing Defence Threat Response. This repo provides a way to directly setup the entire lab in a Virtual environment, with just one command.
 Operating system for the lab: Windows 7 pro x64
 ## Requirements
 - [Vagrant](https://www.vagrantup.com/downloads)

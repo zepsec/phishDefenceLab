@@ -32,7 +32,7 @@ Password: resu
 
 ## Modifications:
 
-### Forensics:
+### Forensics Tools:
 - [Network monitor](https://www.microsoft.com/en-in/download/details.aspx?id=4865)
 - [Wireshark](https://www.wireshark.org/download.html)
 - [Process Hacker](https://processhacker.sourceforge.io/) Portable

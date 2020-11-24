@@ -1,61 +1,60 @@
 # phishDefenceLab
 Testing laboratory for Phish Defense | Digital Forensics &amp; Incident Response
 
-Phish Defence Lab is a pre-configured virtual machine, consisting of various tools and settings needed for a Phishing Defence Threat Response. This repo provides a way to directly setup the entire lab in a Virtual environment, with just one command.
-Operating system for the lab: Windows 7 pro x64
+Phish Defence Lab is a powershell script, that will automatically setup your virtual machine with all the tools necessary for a Phish Defence System. It consists of various tools and settings needed for a Phishing Defence Threat Response. This repo provides a way to directly setup the entire lab in a Virtual environment, with just one command.
+
+Required Operating System: Windows 10 x64
+
 ## Requirements
-- [Vagrant](https://www.vagrantup.com/downloads)
-- [VirtualBox](https://www.virtualbox.org/wiki/Downloads)
 - Windows base machine
 
 ## How to setup
-There are two ways to setup the lab.
-1. Powershell script:
-To do this, you need to enable execution of scripts, which is by default disabled in windows. For this, go to powershell and type
-```sh
-PS C:\Users\user\pdclab> Set-ExecutionPolicy Unrestricted
+There are two scripts:
+### 1. Manual Installation (setupLab.ps1):
+This script manually downloads the tools from the source and installs it. To use this, follow the steps:
+- Run powershell as administrator and type:
 ```
-After changing the Execution Policy, just execute the script
-```sh
-PS C:\Users\user\pdclab> .\setup.ps1
+set-executionpolicy unrestricted
 ```
-
-2. Using vagrant
-Download the Vagrantfile from the repo and store it in a seperate folder. With this you can directly setup the box with one command
-```sh
-PS C:\Users\user\pdclab> vagrant up
+- Then run the script:
+``` ./setupLab.ps1
 ```
 
-Advantage of powershell script over directly using vagrant, is that script will automatically check for the presence of VirtualBox, Vagrant and the lab in your system.
-Account : user
-Password: resu
+### 2. Using [chocolaty package manager](https://chocolatey.org/) (setupLabChoco.ps1):
+This script will use the Chocolaty package manager to install all the tools
+- Run powershell as administrator and type:
+```
+Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://chocolatey.org/install.ps1'))
+```
+- Run the script:
+```
+./setupLabChoco.ps1
+```
 
 ## Modifications:
 
 ### Forensics Tools:
 - [Network monitor](https://www.microsoft.com/en-in/download/details.aspx?id=4865)
 - [Wireshark](https://www.wireshark.org/download.html)
-- [Process Hacker](https://processhacker.sourceforge.io/) Portable
-- [HashMyFiles](https://www.nirsoft.net/utils/hash_my_files.html) Portable
+- [Process Hacker](https://processhacker.sourceforge.io/)
+- [HashMyFiles](https://www.nirsoft.net/utils/hash_my_files.html)
 - [Fiddler](https://www.telerik.com/download/fiddler-everywhere)
-- [PEiD](https://www.aldeid.com/wiki/PEiD) Portable
-- [PEStudio](https://www.winitor.com/) Portable
-- [PSTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools) (Environment Variables added)
-- [SysInternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite) (Environment Variables added)
+- [PEStudio](https://www.winitor.com/) 
+- [PSTools](https://docs.microsoft.com/en-us/sysinternals/downloads/pstools)
+- [SysInternals Suite](https://docs.microsoft.com/en-us/sysinternals/downloads/sysinternals-suite)
 - [file for windows](http://gnuwin32.sourceforge.net/packages/file.htm)
 - [oletools](https://github.com/decalage2/oletools)
 - [Regshot](https://sourceforge.net/projects/regshot/) Portable
-- [PDFStreamDumper](https://github.com/dzzie/pdfstreamdumper)
 
 ### Other Softwares:
 - [Python 3.8.6](https://www.python.org/downloads/release/python-386/)
-- [Notepad++](https://notepad-plus-plus.org/downloads/) Portable
-- [Adobe Acrobat Reader](get.adobe.com/reader/)
-- [Bulk Crap Uninstaller](https://www.bcuninstaller.com/) Portable
+- [Notepad++](https://notepad-plus-plus.org/downloads/)
+- [Adobe Acrobat Reader](get.adobe.com/reader/) (Only in Chocolaty package manager)
+- [Bulk Crap Uninstaller](https://www.bcuninstaller.com/)
 - [7zip](https://www.7-zip.org/)
 - [Winrar](https://www.win-rar.com/start.html?&L=0)
 - [Firefox](https://www.mozilla.org/en-US/firefox/new/)
-- [Chrome](https://www.google.com/intl/en_in/chrome/)
+- [Chrome](https://www.google.com/intl/en_in/chrome/) (Only in Chocolaty package manager)
 
 ## Settings:
 - Firewall and defender disabled

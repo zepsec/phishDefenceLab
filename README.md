@@ -17,7 +17,8 @@ This script manually downloads the tools from the source and installs it. To use
 set-executionpolicy unrestricted
 ```
 - Then run the script:
-``` ./setupLab.ps1
+``` 
+./setupLab.ps1
 ```
 
 ### 2. Using [chocolaty package manager](https://chocolatey.org/) (setupLabChoco.ps1):
